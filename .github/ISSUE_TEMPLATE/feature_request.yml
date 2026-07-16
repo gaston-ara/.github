@@ -1,0 +1,70 @@
+name: Feature request
+description: Propose a new feature or improvement
+title: "feat: "
+labels:
+  - "status:needs-review"
+  - "type:feature"
+body:
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight checks
+      options:
+        - label: I searched existing issues and confirmed this request is not a duplicate.
+          required: true
+        - label: I understand that a maintainer must add `status:approved` before implementation begins.
+          required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Description
+      description: Describe the user or product problem this request should solve.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Explain the desired behavior and outcome.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected Area
+      description: Select the primary area affected by this request.
+      options:
+        - Catalog and taxonomy
+        - Retailer integrations
+        - API and backend
+        - Frontend
+        - Data migration and operations
+        - Testing and quality
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: List the observable conditions that must be met for this request to be complete.
+      placeholder: |
+        - [ ] The expected behavior is covered by tests.
+        - [ ] Relevant documentation is updated.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives
+      description: Describe alternatives or workarounds considered.
+    validations:
+      required: false
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add references, examples, screenshots, or other useful context.
+    validations:
+      required: false
