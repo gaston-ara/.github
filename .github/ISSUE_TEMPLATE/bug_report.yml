@@ -1,0 +1,76 @@
+name: Bug report
+description: Report reproducible behavior that is not working as expected
+title: "bug: "
+labels:
+  - "status:needs-review"
+  - "type:bug"
+body:
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight checks
+      options:
+        - label: I searched existing issues and confirmed this report is not a duplicate.
+          required: true
+        - label: I understand that a maintainer must add `status:approved` before implementation begins.
+          required: true
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug Description
+      description: Clearly describe the problem and its impact.
+    validations:
+      required: true
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Provide the smallest reliable sequence that reproduces the problem.
+      placeholder: |
+        1. Go to ...
+        2. Run or select ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: Describe what should happen.
+    validations:
+      required: true
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: Describe what happens instead, including any visible error.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include the application version or commit, operating system, runtime, browser, and other relevant dependencies.
+      placeholder: |
+        Application version or commit:
+        Operating system:
+        Runtime and version:
+        Browser and version:
+        Other relevant dependencies:
+    validations:
+      required: true
+  - type: textarea
+    id: relevant-logs
+    attributes:
+      label: Relevant Logs
+      description: Paste relevant logs or error output. Remove secrets and personal information first.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add screenshots, links, workarounds, scope notes, or any other useful context. Enter "None" if there is nothing else to add.
+    validations:
+      required: true
